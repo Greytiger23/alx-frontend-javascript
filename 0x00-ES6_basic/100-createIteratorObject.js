@@ -16,14 +16,12 @@ export default function createIteratorObject(report) {
         if (currentDepartment < departments.length) {
           return {
             value: report[departments[currentDepartment - 1]][report[departments[currentDepartment - 1]].length - 1],
-            done: false
+            done: false,
           };
-        } else {
-          return { done: true };
         }
-        } else {
-          return { done: true };
-        }
+        return { done: true };
       }
+      return { done: true };
+    },
   };
 }
