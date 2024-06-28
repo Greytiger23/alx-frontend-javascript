@@ -11,6 +11,7 @@ export default class Currency {
     if (typeof value !== 'string') {
       throw new TypeError(errorMessage);
     }
+    return this;
   }
 
   get code() {

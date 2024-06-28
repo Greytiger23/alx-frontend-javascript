@@ -23,5 +23,6 @@ export default class SkyHighBuilding extends Building {
     if (typeof value !== 'number') {
       throw new TypeError(errorMessage);
     }
+    return this;
   }
 }

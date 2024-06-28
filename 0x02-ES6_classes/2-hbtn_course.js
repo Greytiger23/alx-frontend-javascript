@@ -8,22 +8,25 @@ export default class HolbertonCourse {
     this._students = students;
   }
 
-  this._validateString(value, errorMessage) {
+  _validateString(value, errorMessage) {
     if (typeof value !== 'string') {
       throw new TypeError(errorMessage);
     }
+    return this;
   }
 
-  this._validateNumber(value, errorMessage) {
+  _validateNumber(value, errorMessage) {
     if (typeof value !== 'number') {
       throw new TypeError(errorMessage);
     }
+    return this;
   }
 
-  this._validateArrayOfString(value, errorMessage) {
+  _validateArrayOfString(value, errorMessage) {
     if (!Array.isArray(value) || !value.every((item) => typeof item === 'string')) {
       throw new TypeError(errorMessage);
     }
+    return this;
   }
 
   get name() {

@@ -13,12 +13,14 @@ export default class Pricing {
     if (typeof value !== 'number') {
       throw new TypeError(errorMessage);
     }
+    return this;
   }
 
   _validateCurrencyInstance(value, errorMessage) {
     if (!(value instanceof Currency)) {
       throw new TypeError(errorMessage);
     }
+    return this;
   }
 
   get amount() {
